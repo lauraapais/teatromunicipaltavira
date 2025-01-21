@@ -1,0 +1,209 @@
+:root {
+    --bg-color: rgb(250, 179, 73);
+    --black: #000000;
+    --white: #ffffff;
+
+
+    --marginDesktop: 1vw;
+    --marginMobile: 4vw;
+}
+
+@font-face {
+    font-family: 'Sherman-Display';
+    src: url('data/Sherman-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal-Regular';
+    src: url('data/font/PPNeueMontreal-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal-Book';
+    src: url('data/font/PPNeueMontreal-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal-Medium';
+    src: url('data/font/PPNeueMontreal-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: var(--marginDesktop);
+}
+
+p {
+    font-family: 'PPNeueMontreal-Regular', sans-serif;
+    font-size: 20px;
+}
+
+hr {
+    border-top: 1px solid var(--black);
+    border-bottom: none;
+}
+
+.bold {
+    font-family: 'PPNeueMontreal-Medium', sans-serif;
+
+}
+
+.small-p{
+    font-size: 18px;
+}
+
+
+/*Header*/
+header p {
+    cursor: pointer;
+    margin: var(--marginDesktop) 0;
+}
+
+header p:hover {
+    font-weight: bold;
+    transition: font-weight 0.5s ease;
+}
+
+.navHeader-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navHeader {
+    display: flex;
+    gap: var(--marginDesktop);
+}
+
+.header-socialMedia p {
+    font-family: 'PPNeueMontreal-Book', sans-serif;
+}
+
+/*Footer*/
+.footerMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    font-family: 'PPNeueMontreal-Book', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    gap: calc(var(--marginDesktop)* 4);
+    margin-top: var(--marginDesktop);
+}
+
+#newsletterFooter-input{
+    font-family: 'PPNeueMontreal-Book', sans-serif;
+    height:var(--marginDesktop);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    padding: 5px 0;
+    width: 15vw;
+}
+
+#newsletterFooter-button{
+    height:max-content;
+    background-color: transparent;
+    border: 1px solid var(--black);
+    font-family: 'PPNeueMontreal-Book', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.newslettercontent{
+    display: flex;
+    gap: var(--marginDesktop);
+    
+}
+
+.newsletter-container{
+    margin: var(--marginDesktop) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/**/
+.agendaItem-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--marginDesktop);
+}
+
+.agendaItem {
+    width: calc((100vw - var(--marginDesktop) * 4) / 3);
+    height: calc((100vw - var(--marginDesktop) * 4) / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.agendaItem img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.text-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+path#textPath {
+    fill: none;
+    stroke: transparent;
+}
+
+.mainText {
+    font-family: 'Sherman-Display', sans-serif;
+    font-size: 15px;
+    fill: var(--black);
+    letter-spacing: .05rem;
+}
+
+.eventDetails {
+    font-family: 'Sherman-Display', sans-serif;
+    font-size: 10px;
+    fill: var(--white);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    letter-spacing: .05rem;
+}
+
+.agendaItem:hover .eventDetails {
+    opacity: 1;
+}
+
+.agendaItem:hover #textPath {
+    transform: rotate(90deg);
+}
+
+.agendaItem:hover {
+    cursor: pointer;
+}
+
+.circleText {
+    overflow: visible;
+}
