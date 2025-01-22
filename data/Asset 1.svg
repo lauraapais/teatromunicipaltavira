@@ -1,51 +1,50 @@
-i wanted. to know how to define the text direction in these code
+i want to have 2 different path options:
+1) <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+2) <path id="textPath2" d="M 110, 110 m -95, 0 a 95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
 
-<div class="agendaItem">
+
+if the path rotation is set to 0 or 90, the path should be the second 
+if the path rotation is set to 180 or -90, the path should be the fisrt 
+
+<main>
+        <div class="agendaItem-container">
+            <div class="agendaItem-container">
+                
+                <!--1-->
+                <div class="agendaItem">
                     <img class="agendaItem-image" src="data/index/PedroAbrunhosa_2.jpg">
                     <svg viewBox="0 0 220 220" class="text-circle">
-                        <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+                        <path id="textPath2" d="M 110, 110 m -95, 0 a 95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
                         <text>
-                            <textPath href="#textPath" class="circleText" dominant-baseline="middle" side="right">
+                            <textPath href="#textPath2" class="circleText" dominant-baseline="middle" side="right">
                                 <tspan class="eventDetails">17:00, 21:30</tspan>
-                                <tspan class="mainText">PEDRO ABRUNHOSA COM A ORQUESTRA CLÁSSICA DO CENTRO</tspan>
+                                <tspan class="mainText">Pedro Abrunhosa com a Orquestra Clássica do Centro</tspan>
                                 <tspan class="eventDetails">Música</tspan>
                             </textPath>
-                            
                         </text>
                     </svg>
                 </div>
 
-
-
-like how its done inn this code:
-    <main>
-        <div class="agendaItem-container">
-            <div class="agendaItem-container">
-                <!--1-->
-                <div class="agendaItem">
-                    <div class="agendaItem">
-                        <svg viewBox="0 0 500 500">
-                            <path fill="transparent" id="curve1" d=" M 400 0 A 200 197 0 1 1 400 -7" />
-                            <text x="6" width="500">
-                                <a href='https://google.com'>
-                                    <textPath href="#curve1">
-                                        Test text direction
-                                    </textPath>
-                                </a>
-                            </text>
-                        </svg>
-
-                        <svg viewBox="0 0 500 500">
-                            <path fill="transparent" stroke="black" id="curve2" d=" M 0 0 A 200 200 0 0 0 400 0" />
-                            <a href='https://google.com'>
-                                <text x="6">
-                                    <textPath xlink:href="#curve2">
-                                        <tspan dy="-5">Test text direction </tspan>
-                                    </textPath>
-                                </text>
-                            </a>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
     </main>
+
+...
+
+    <script>
+        function getRandomRotation() {
+            const rotations = [0, 90, 180, -90];
+            const randomIndex = Math.floor(Math.random() * rotations.length);
+            return rotations[randomIndex];
+        }
+        const textElements = document.querySelectorAll('text .circleText');
+
+        textElements.forEach((textElement) => {
+            const rotationAngle = getRandomRotation();
+            textElement.parentElement.setAttribute('transform', `rotate(${rotationAngle} 110 110)`);
+        });
+    </script>
+
+</body>
+
+</html>
