@@ -1,24 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.21 470.21">
-  <defs>
-  </defs>
-  <g id="Layer_1-2" data-name="Layer_1">
-    <text class="cls-1" transform="translate(14.55 220.69) rotate(85.7)"><tspan x="0" y="0">T</tspan></text>
-    <text class="cls-1" transform="translate(16.53 248.59) rotate(78.94)"><tspan x="0" y="0">e</tspan></text>
-    <text class="cls-1" transform="translate(23.13 280.53) rotate(71.8)"><tspan x="0" y="0">s</tspan></text>
-    <text class="cls-1" transform="translate(31.39 304.99) rotate(66.01)"><tspan x="0" y="0">t</tspan></text>
-    <text class="cls-1" transform="translate(40.1 325) rotate(59.51)"><tspan x="0" y="0">e</tspan></text>
-    <text class="cls-1" transform="translate(56.81 352.34) rotate(53.88)"><tspan x="0" y="0"> </tspan></text>
-    <text class="cls-1" transform="translate(65.14 363.89) rotate(49.61)"><tspan x="0" y="0">t</tspan></text>
-    <text class="cls-1" transform="translate(79.14 380.62) rotate(43.17)"><tspan x="0" y="0">e</tspan></text>
-    <text class="cls-1" transform="translate(103.13 402.65) rotate(36.12)"><tspan x="0" y="0">s</tspan></text>
-    <text class="cls-1" transform="translate(124.09 417.7) rotate(30.38)"><tspan x="0" y="0">t</tspan></text>
-    <text class="cls-1" transform="translate(142.82 428.88) rotate(23.88)"><tspan x="0" y="0">e</tspan></text>
-    <text class="cls-1" transform="translate(172.35 441.38) rotate(18.2)"><tspan x="0" y="0"> </tspan></text>
-    <text class="cls-1" transform="translate(185.86 445.9) rotate(13.88)"><tspan x="0" y="0">t</tspan></text>
-    <text class="cls-1" transform="translate(207.02 451.31) rotate(7.37)"><tspan x="0" y="0">e</tspan></text>
-    <text class="cls-1" transform="translate(239.14 455.02) rotate(.93)"><tspan x="0" y="0">s</tspan></text>
-    <text class="cls-1" transform="translate(265.13 455.11) rotate(-5.32)"><tspan x="0" y="0">t</tspan></text>
-    <text class="cls-1" transform="translate(286.88 453.26) rotate(-11.81)"><tspan x="0" y="0">e</tspan></text>
-  </g>
-</svg>
+i wanted. to know how to define the text direction in these code
+
+<div class="agendaItem">
+                    <img class="agendaItem-image" src="data/index/PedroAbrunhosa_2.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+                        <text>
+                            <textPath href="#textPath" class="circleText" dominant-baseline="middle" side="right">
+                                <tspan class="eventDetails">17:00, 21:30</tspan>
+                                <tspan class="mainText">PEDRO ABRUNHOSA COM A ORQUESTRA CLÁSSICA DO CENTRO</tspan>
+                                <tspan class="eventDetails">Música</tspan>
+                            </textPath>
+                            
+                        </text>
+                    </svg>
+                </div>
+
+
+
+like how its done inn this code:
+    <main>
+        <div class="agendaItem-container">
+            <div class="agendaItem-container">
+                <!--1-->
+                <div class="agendaItem">
+                    <div class="agendaItem">
+                        <svg viewBox="0 0 500 500">
+                            <path fill="transparent" id="curve1" d=" M 400 0 A 200 197 0 1 1 400 -7" />
+                            <text x="6" width="500">
+                                <a href='https://google.com'>
+                                    <textPath href="#curve1">
+                                        Test text direction
+                                    </textPath>
+                                </a>
+                            </text>
+                        </svg>
+
+                        <svg viewBox="0 0 500 500">
+                            <path fill="transparent" stroke="black" id="curve2" d=" M 0 0 A 200 200 0 0 0 400 0" />
+                            <a href='https://google.com'>
+                                <text x="6">
+                                    <textPath xlink:href="#curve2">
+                                        <tspan dy="-5">Test text direction </tspan>
+                                    </textPath>
+                                </text>
+                            </a>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    </main>

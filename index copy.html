@@ -32,23 +32,29 @@
                 <!--1-->
                 <div class="agendaItem">
                     <div class="agendaItem">
-                        <img src="data/index/linda martini.jpg">
-                        <svg viewBox="0 0 220 220" class="text-circle">
-                            <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
+                        <svg viewBox="0 0 500 500">
+                            <path fill="transparent" id="curve1" d=" M 400 0 A 200 197 0 1 1 400 -7" />
                             <text>
-                                <textPath href="#textPath" class="circleText" startOffset="0%" dominant-baseline="middle" text-anchor="middle">
-                                    <tspan class="eventDetails">21:30</tspan>
-                                    <tspan class="mainText">LINDA MARTINI PASSA-MONTANHAS</tspan>
-                                    <tspan class="eventDetails">Música</tspan>
-                                </textPath>
+                                    <textPath href="#curve1">
+                                        Test text direction
+                                    </textPath>
                             </text>
                         </svg>
+
+                        <svg viewBox="0 0 500 500">
+                            <path fill="transparent" stroke="black" id="curve2" d=" M 0 0 A 200 200 0 0 0 400 0" />
+                                <text>
+                                    <textPath xlink:href="#curve2">
+                                        <tspan dy="-5">Test text direction </tspan>
+                                    </textPath>
+                                </text>
+                        </svg>
                     </div>
-                    </div>
-        </div>
+                </div>
+            </div>
     </main>
-    
-    
+
+
 
     <footer>
         <hr>
