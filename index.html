@@ -29,14 +29,14 @@
     <main>
         <div class="agendaItem-container">
             <div class="agendaItem-container">
-                <!--agendaItem-->
+                <!--1-->
                 <div class="agendaItem">
                     <img src="data/PedroAbrunhosa_2.jpg">
                     <svg viewBox="0 0 220 220" class="text-circle">
                         <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
                         <text>
                             <textPath href="#textPath" class="circleText" startOffset="0%">
-                                <tspan class="eventDetails">17:00/21:30</tspan>
+                                <tspan class="eventDetails">17:00, 21:30</tspan>
                                 <tspan class="mainText">PEDRO ABRUNHOSA COM A ORQUESTRA CLÁSSICA DO CENTRO</tspan>
                                 <tspan class="eventDetails">Música</tspan>
                             </textPath>
@@ -44,7 +44,7 @@
                     </svg>
                 </div>
 
-                <!--agendaItem-->
+                <!--2-->
                 <div class="agendaItem">
                     <img src="data/blue.jpg">
                     <svg viewBox="0 0 220 220" class="text-circle">
@@ -59,8 +59,8 @@
                     </svg>
                 </div>
 
-                 <!--agendaItem-->
-                 <div class="agendaItem">
+                <!--3-->
+                <div class="agendaItem">
                     <img src="data/omeuamorviradecomboio.jpg">
                     <svg viewBox="0 0 220 220" class="text-circle">
                         <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
@@ -74,6 +74,50 @@
                     </svg>
                 </div>
 
+                <!--4-->
+                <div class="agendaItem">
+                    <img src="data/corlimao.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
+                        <text>
+                            <textPath href="#textPath" class="circleText" startOffset="0%">
+                                <tspan class="eventDetails">10:30, 14:00</tspan>
+                                <tspan class="mainText">A COR DO LIMÃO</tspan>
+                                <tspan class="eventDetails">Atividades de Família, Teatro</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!--5-->
+                <div class="agendaItem">
+                    <img src="data/jorgeplama.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
+                        <text>
+                            <textPath href="#textPath" class="circleText" startOffset="0%">
+                                <tspan class="eventDetails">21:30</tspan>
+                                <tspan class="mainText">JORGE PALMA TRIO FESTIVAL MONTEPIO ÀS VEZES O AMOR</tspan>
+                                <tspan class="eventDetails">Música</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!--6-->
+                <div class="agendaItem">
+                    <img src="data/amigostreta.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <path id="textPath" d="M110,110 m-100,0 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0" />
+                        <text>
+                            <textPath href="#textPath" class="circleText" startOffset="0%">
+                                <tspan class="eventDetails">21:30</tspan>
+                                <tspan class="mainText">AMIGOS DA TRETA</tspan>
+                                <tspan class="eventDetails">Comédia</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
             </div>
         </div>
     </main>
@@ -118,24 +162,19 @@
             const randomIndex = Math.floor(Math.random() * rotations.length);
             return rotations[randomIndex];
         }
-    
+
         // Select all text elements containing textPath with class circleText
         const textElements = document.querySelectorAll('text .circleText');
-    
+
         textElements.forEach((textElement) => {
             const rotationAngle = getRandomRotation();
             // Apply rotation to each text element individually
             textElement.parentElement.setAttribute('transform', `rotate(${rotationAngle} 110 110)`);
         });
     </script>
-    
-    
-    
+
+
+
 </body>
 
 </html>
-
-
-
-
-

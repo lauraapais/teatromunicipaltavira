@@ -198,6 +198,14 @@ path#textPath {
     opacity:1;
 }
 
+.agendaItem:hover .text-circle {
+    transition: transform 0.5s ease;
+    transform: rotate(5deg);
+}
+
+.agendaItem .text-circle {
+    transition: transform 0.5s ease;}
+
 .agendaItem:hover {
     cursor: pointer;
 }
