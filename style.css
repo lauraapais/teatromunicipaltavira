@@ -133,7 +133,7 @@ footer p {
 }
 
 .newsletter-container{
-    margin: var(--marginDesktop) 0;
+    margin-top: var(--marginDesktop);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -169,6 +169,7 @@ footer p {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    fill: none;
 }
 
 path#textPath {
@@ -192,12 +193,9 @@ path#textPath {
     letter-spacing: .05rem;
 }
 
-.agendaItem:hover .eventDetails {
-    opacity: 1;
-}
 
-.agendaItem:hover #textPath {
-    transform: rotate(90deg);
+.agendaItem:hover .eventDetails {
+    opacity:1;
 }
 
 .agendaItem:hover {
