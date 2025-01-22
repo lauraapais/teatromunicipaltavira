@@ -160,6 +160,12 @@ footer p {
     height: 75%;
     object-fit: cover;
     border-radius: 100%;
+    opacity:1;
+    transition: opacity 0.5s ease;
+}
+
+.agendaItem:hover .agendaItem img {
+    opacity:0.5;
 }
 
 .text-circle {
@@ -198,6 +204,8 @@ path#textPath {
     opacity:1;
 }
 
+
+
 .agendaItem:hover .text-circle {
     transition: transform 0.5s ease;
     transform: rotate(5deg);
@@ -213,3 +221,4 @@ path#textPath {
 .circleText {
     overflow: visible;
 }
+
