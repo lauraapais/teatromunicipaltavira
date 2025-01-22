@@ -156,7 +156,7 @@ footer p {
     position: relative;
 }
 
-.agendaItem img {
+.agendaItem-image {
     width: 75%;
     height: 75%;
     object-fit: cover;
@@ -165,7 +165,7 @@ footer p {
     transition: opacity 0.5s ease;
 }
 
-.agendaItem:hover .agendaItem img {
+.agendaItem:hover .agendaItem-image{
     opacity:0.5;
 }
 
