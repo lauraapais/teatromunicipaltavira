@@ -144,6 +144,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     gap: var(--marginDesktop);
+    margin-top: var(--marginDesktop);
 }
 
 .agendaItem {
