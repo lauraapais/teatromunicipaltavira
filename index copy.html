@@ -31,25 +31,20 @@
             <div class="agendaItem-container">
                 <!--1-->
                 <div class="agendaItem">
-                    <div class="agendaItem">
-                        <svg viewBox="0 0 500 500">
-                            <path fill="transparent" id="curve1" d=" M 400 0 A 200 197 0 1 1 400 -7" />
-                            <text>
-                                    <textPath href="#curve1">
-                                        Test text direction
-                                    </textPath>
-                            </text>
-                        </svg>
-
-                        <svg viewBox="0 0 500 500">
-                            <path fill="transparent" stroke="black" id="curve2" d=" M 0 0 A 200 200 0 0 0 400 0" />
-                                <text>
-                                    <textPath xlink:href="#curve2">
-                                        <tspan dy="-5">Test text direction </tspan>
-                                    </textPath>
-                                </text>
-                        </svg>
-                    </div>
+                    <img class="agendaItem-image" src="data/index/PedroAbrunhosa_2.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <defs>
+                            <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+                            <path id="textPath2" d="M 110, 110 m -95, 0 a 95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
+                        </defs>
+                        <text>
+                            <textPath href="#textPath2" class="circleText" dominant-baseline="middle" side="right">
+                                <tspan class="eventDetails">17:00, 21:30</tspan>
+                                <tspan class="mainText">Pedro Abrunhosa com a Orquestra Clássica do Centro</tspan>
+                                <tspan class="eventDetails">Música</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
                 </div>
             </div>
     </main>
