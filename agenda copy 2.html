@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tavira</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/phc0gux.css">
+</head>
+
+<body>
+    <header>
+        <hr>
+        <div class="navHeader-container">
+            <div class="navHeader">
+                <p>Homepage</p>
+                <p>A agenda</p>
+                <p>O teatro</p>
+            </div>
+            <div class="navHeader header-socialMedia">
+                <p>Facebook</p>
+                <p>Instagram</p>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <main>
+        <div class="agendaItem-container">
+            <div class="agendaItem-container">
+                <!--1-->
+                <div class="agendaItem">
+                    <img class="agendaItem-image" src="data/index/PedroAbrunhosa_2.jpg">
+                    <svg viewBox="0 0 220 220" class="text-circle">
+                        <defs>
+                            <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+                            <path id="textPath2" d="M 110, 110 m -95, 0 a 95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
+                        </defs>
+                        <text>
+                            <textPath href="#textPath2" class="circleText" dominant-baseline="middle" side="right">
+                                <tspan class="eventDetails">17:00, 21:30</tspan>
+                                <tspan class="mainText">Pedro Abrunhosa com a Orquestra Clássica do Centro</tspan>
+                                <tspan class="eventDetails">Música</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+    </main>
+
+
+
+    <footer>
+        <hr>
+        <div class="footerMain">
+            <div class="footer-container">
+                <div class="footerInfo">
+                    <p class="bold">Teatro Municipal António Pinheiro</p>
+                    <p>Shopping do Cacém,</p>
+                    <p>R. Coração de Maria nº1, 2735-470</p>
+                    <p>40.1124° N, 8.2465° W</p>
+                </div>
+                <div>
+                    <p class="bold">Bilheteira.tmap@cm-tavira.pt</p>
+                    <p class="bold">914 616 949</p>
+                    <p>Instagram</p>
+                    <p>Facebook</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newslettercontent">
+                    <p class="bold">Subscreva a Newsletter</p>
+                    <input type="text" class="small-p" id="newsletterFooter-input" name="newsletterFooter"
+                        value="E-mail">
+                    <button type="button" class="small-p" id="newsletterFooter-button">Subscrever</button>
+                </div>
+
+                <div class="newslettercontent">
+                    <p class="small-p">Ao subscrever aceita a Política de Privacidade.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function getRandomRotation() {
+            const rotations = [0, 90, 180, -90];
+            const randomIndex = Math.floor(Math.random() * rotations.length);
+            return rotations[randomIndex];
+        }
+
+        // Select all text elements containing textPath with class circleText
+        const textElements = document.querySelectorAll('text .circleText');
+
+        textElements.forEach((textElement) => {
+            const rotationAngle = getRandomRotation();
+            // Apply rotation to each text element individually
+            textElement.parentElement.setAttribute('transform', `rotate(${rotationAngle} 110 110)`);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

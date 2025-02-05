@@ -43,12 +43,25 @@
 
 body {
     background-color: var(--bg-color);
-    margin: var(--marginDesktop);
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
 }
 
 p {
+    font-family: 'PPNeueMontreal-Book', sans-serif;
+    font-size: 18px;
+}
+
+.small-p {
+    font-size: 16px;
+}
+
+h3 {
     font-family: 'PPNeueMontreal-Regular', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 hr {
@@ -61,15 +74,23 @@ hr {
 
 }
 
-.small-p{
+.small-p {
     font-size: 18px;
 }
 
 
 /*Header*/
+header {
+    margin: 0 var(--marginDesktop);
+    margin-top: var(--marginDesktop);
+    flex-direction: column;
+    margin-bottom: 0 !important;
+    justify-content: space-between;
+}
+
 header p {
     cursor: pointer;
-    margin: var(--marginDesktop) 0;
+    margin: calc(var(--marginDesktop) * 0.75) 0;
 }
 
 header p:hover {
@@ -92,6 +113,11 @@ header p:hover {
 }
 
 /*Footer*/
+footer {
+    margin: 0 var(--marginDesktop);
+    margin-bottom: var(--marginDesktop);
+}
+
 .footerMain {
     display: flex;
     justify-content: space-between;
@@ -107,9 +133,9 @@ footer p {
     margin-top: var(--marginDesktop);
 }
 
-#newsletterFooter-input{
+#newsletterFooter-input {
     font-family: 'PPNeueMontreal-Book', sans-serif;
-    height:var(--marginDesktop);
+    height: var(--marginDesktop);
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--black);
@@ -117,8 +143,8 @@ footer p {
     width: 15vw;
 }
 
-#newsletterFooter-button{
-    height:max-content;
+#newsletterFooter-button {
+    height: max-content;
     background-color: transparent;
     border: 1px solid var(--black);
     font-family: 'PPNeueMontreal-Book', sans-serif;
@@ -126,13 +152,19 @@ footer p {
     border-radius: 5px;
 }
 
-.newslettercontent{
+.newslettercontent {
     display: flex;
     gap: var(--marginDesktop);
-    
+
 }
 
-.newsletter-container{
+.newslettercontent-flex {
+    display: flex;
+    gap: var(--marginDesktop);
+
+}
+
+.newsletter-container {
     margin-top: var(--marginDesktop);
     display: flex;
     flex-direction: column;
@@ -161,12 +193,12 @@ footer p {
     height: 75%;
     object-fit: cover;
     border-radius: 100%;
-    opacity:1;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
-.agendaItem:hover .agendaItem-image{
-    opacity:0.5;
+.agendaItem:hover .agendaItem-image {
+    opacity: 0.5;
 }
 
 .text-circle {
@@ -202,7 +234,7 @@ path#textPath {
 
 
 .agendaItem:hover .eventDetails {
-    opacity:1;
+    opacity: 1;
 }
 
 
@@ -213,7 +245,8 @@ path#textPath {
 }
 
 .agendaItem .text-circle {
-    transition: transform 0.5s ease;}
+    transition: transform 0.5s ease;
+}
 
 .agendaItem:hover {
     cursor: pointer;
@@ -223,3 +256,42 @@ path#textPath {
     overflow: visible;
 }
 
+
+
+ /*Index*/
+ .indexScreen-carousel {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+.carousel-image {
+    min-width: 100%;
+    transition: transform 0.7s ease;
+}
+
+.indexScreen-slides {
+    width: 100%;
+    position: absolute;
+    bottom: calc(var(--marginDesktop) * 2);
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--marginDesktop) / 2);
+}
+
+.slide {
+    border: 1px solid var(--black);
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.slidesSelected {
+    background-color: var(--black);
+}
