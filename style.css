@@ -287,16 +287,23 @@ path#textPath {
     -ms-overflow-style: none;
     scrollbar-width: none;
     transition: transform 0.7s ease;
+    height: 90vh;
 }
 
 .carousel-container::-webkit-scrollbar {
     display: none;
 }
 
+.img-container {
+    min-width: 100vw;
+    height: 100%;
+}
+
 .carousel-image {
-    object-fit: cover;
+    object-fit: contain;
+    object-position: top center;
     width: 100%;
-    height: min-content;
+    height: 100%;
     scroll-snap-align: center;
     transition: transform 0.7s ease;
 }
