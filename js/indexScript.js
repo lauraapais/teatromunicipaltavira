@@ -16,6 +16,8 @@ carouselContainer.addEventListener('scroll', () => {
     const containerWidth = carouselContainer.offsetWidth;
     currentIndex = Math.round(scrollLeft / containerWidth);
     updateSlidesIndicator(currentIndex);
+    body.style.transition = 'background-color 1s'; 
+    body.style.backgroundColor = slideColors[currentIndex];
 });
 
 function updateCarousel(targetIndex) {
@@ -24,7 +26,7 @@ function updateCarousel(targetIndex) {
         left: targetIndex * containerWidth,
         behavior: 'smooth'
     });
-    body.style.transition = 'background-color 0.5s';
+    body.style.transition = 'background-color 1s'; 
     body.style.backgroundColor = slideColors[targetIndex];
     currentIndex = targetIndex;
 }
