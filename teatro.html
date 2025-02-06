@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tavira</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/phc0gux.css">
+</head>
+
+<body>
+    <header>
+        <hr>
+        <div class="navHeader-container">
+            <div class="navHeader">
+                <a href="index.html">
+                    <p class="navHeader-element bold">Homepage</p>
+                </a>
+                <a href="agenda.html">
+                <p class="navHeader-element bold">A agenda</p>
+            </a>
+            <a href="teatro.html">
+                <p class="navHeader-element bold">O teatro</p>
+            </a>
+            </div>
+            <div class="navHeader header-socialMedia">
+                <p class="navHeader-element">Facebook</p>
+                <p class="navHeader-element">Instagram</p>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <main class="mainTeatro">
+        <div class="imageTeatro">
+            <img src="data/teatro/teatro_1.jpg" class="active">
+            <img src="data/teatro/teatro_2.jpg">
+        </div>
+        
+        <div class="teatroInfo-container">
+            <hr>
+            <div class="aboutTeatro">
+                <h3>O teatro e cinema de Tavira têm uma longa história, que vai muito além do “Cine-Teatro de tavira”.
+                    Essa história atravessa várias gerações e o seu início é do século XIX, com a construção de um
+                    espaço, o Teatro Velho, cuja inauguração ocorreu em 1863 e que foi encerrado em meados de 1947, por
+                    questões de segurança. Em abril de 1946, as obras do novo Cine-teatro são adjudicadas com o limite
+                    máximo de um ano para a conclusão da obra. O “Cine-Teatro de Tavira” foi inaugurado a 4 de outubro
+                    de 1947, tendo a sua construção ficado a dever-se à empresa Progresso de Tavira, Lda, e manteve-se
+                    em funcionamento até 1987, altura em que foi encerrado por questões de segurança.</h3>
+                <h3>A Câmara Municipal decidiu-se pela aquisição do edifício, processo moroso que culminou em dezembro
+                    de 1989. O edifício foi remodelado e passou a funcionar regularmente a partir de 1 de maio de 1992,
+                    tendo mais tarde encerrado para manutenção e, em 2020, suspendido atividade para profundas obras de
+                    reconstrução e qualificação. A 4 de outubro de 2024, o “Teatro Municipal António Pinheiro” abriu
+                    totalmente renovado, com instalações, equipamentos e uma programação de excelência, com música,
+                    dança, teatro, ciclos de cinema, entre outros.</h3>
+            </div>
+            <div class="moreInfoTeatro">
+                <div>
+                    <hr>
+                    <h3>Morada</h3>
+                    <p>Shopping do Cacém,<br>
+                        R. Coração de Maria nº1, 2735-470<br>
+                        40.1124° n, 8.2465° w</p>
+                </div>
+                <div>
+                    <hr>
+                    <h3>Contactos</h3>
+                    <p>bilheteira.tmap@cm-tavira.pt<br>
+                        914 616 949</p>
+                </div>
+                <div>
+                    <hr>
+                    <h3>Horário</h3>
+                    <p>Terça a sexta 13:00 às 19:00 Sábados 10:00 às 13:00<br>
+                        19:30 às 22:00 (dias de espetáculo)</p>
+                    <p>Domingos e feriados em dia de espetáculo abre 2 horas antes do espetáculo, encerrando 30 minutos
+                        após o início do espetáculo.</p>
+                </div>
+            </div>
+            <div class="infoTeatro-open" onclick="toggleContent('infoTeatro-open-content1')">
+                <hr>
+                <div class="infoTeatro-open-title">                    
+                    <h3>Equipa</h3>
+                    <h3>+</h3>
+                </div>
+                <div class="infoTeatro-open-content" id="infoTeatro-open-content1">
+                    <p>
+                        <br>
+                        Direção Artística<br>
+                        João Aidos<br>
+                        <br>
+                        Projeto Educativo, Mediação, Capacitação e Envolvimento da Comunidade<br>
+                        Lavinia Zuccala<br>
+                        <br>
+                        Produção<br>
+                        Mónica Martins<br>
+                        <br>
+                        Comunicação<br>
+                        Miguel Duarte<br>
+                        <br>
+                        Acolhimento, Frente Casa e Bilheteira<br>
+                        Teresa Santos<br>
+                        <br>
+                        Equipa de Assistentes de Sala<br>
+                        Activar – Associação de Cooperação da Lousã<br>
+                        <br>
+                        Direção Técnica<br>
+                        José Martins<br>
+                        <br>
+                        Sonoplastia<br>
+                        Henrique Monteiro<br>
+                        <br>
+                        Luminotecnia<br>
+                        Jay Collin<br>
+                        <br>
+                        Manutenção e Instalações<br>
+                        Câmara Municipal da Lousã<br>
+                        <br>
+                        Design<br>
+                        united by<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="infoTeatro-open" onclick="toggleContent('infoTeatro-open-content2')">
+                <hr>
+                <div class="infoTeatro-open-title">
+                    <h3>Bilheteria</h3>
+                    <h3>+</h3>
+                </div>
+                <div class="infoTeatro-open-content" id="infoTeatro-open-content2">
+                    <p>
+                        <br>
+                        Informações, Bilheteira, Bilheteira Online E Reservas<br>
+                        <br>
+                        Informação E Reservas Através Do Email Bilheteira.tml@cm-lousa.pt, E Pelo Nº De Telefone 239 990
+                        042.<br>
+                        Regras De Reserva<br>
+                        <br>
+                        Os Bilhetes Reservados Devem Ser Levantados Até 3 Dias Após A Reserva E Até Pelo Menos 24h Antes
+                        Da Hora De Início Do Espetáculo. Após Estes Períodos Serão Automaticamente Cancelados.<br>
+                        Regras De Devolução<br>
+                        <br>
+                        O Programa Pode Sofrer Alterações Por Motivos Imprevistos. Se Por Motivo De Força Maior A Data
+                        De Espetáculo For Alterada, Os Bilhetes Adquiridos Serão Válidos Para A Nova Data Definitiva.
+                        Serão Restituídas Aos Espetadores Que O Exigirem, As Importâncias Dos Respetivos Ingressos
+                        Sempre Que Não Se Puder Efetuar O Espetáculo No Local, Na Data E Hora Marcados, Assim Como Em
+                        Caso De Cancelamento Do Espetáculo. Os Portadores Dos Ingressos Do Espetáculo Em Causa Devem
+                        Apresentar-se Na Bilheteira, Num Prazo De 8 Dias A Contar Do Anúncio De Alteração/ Cancelamento
+                        A Fim De Deixarem Os Dados Pessoais (Nib E Nif) Para A Restituição Do Respetivo Valor Dos
+                        Ingressos. O Mesmo Se Aplica Em Casos De Interrupção Do Espetáculo, Nos Mesmos Prazos E Com As
+                        Mesmas Condições.<br>
+                        Regras Das Salas<br>
+                        <br>
+                        – O Programa Pode Sofrer Alterações Por Motivos Imprevistos;<br>
+                        – O Espetáculo Começa Impreterivelmente À Hora Marcada;<br>
+                        – Após O Início Do Espetáculo Não É Permitida A Entrada Na Sala, Não Havendo Lugar Ao Reembolso
+                        Do Preço Pago Pelo Bilhete;<br>
+                        – É Expressamente Proibido Fumar, Consumir Alimentos Ou Bebidas No Interior Do Auditório E Em
+                        Outros Espaços De Espetáculo;<br>
+                        – O Espetáculo Começa Impreterivelmente À Hora Marcada;<br>
+                        – Após O Início Do Espetáculo Não É Permitida A Entrada Na Sala, Salvo A Indicação Dos
+                        Assistentes;<br>
+                        – Os Espectadores Devem Desligar À Entrada, Todos Os Aparelhos Que Produzam Som, Incluindo
+                        Telemóveis. O Bilhete Deverá Ser Conservado Até Ao Final Do Espetáculo;<br>
+                        – É Proibida A Recolha E Gravação De Imagem Ou Som, Exceto Se Previamente Autorizadas.<br>
+                        Descontos<br>
+                        <br>
+                        Os Descontos E Isenções Aplicam-se Apenas Aos Espetáculos Cuja Programação É Da Responsabilidade
+                        Do Teatro Municipal Da Lousã.<br>
+                        Beneficiam De 20% De Desconto:<br>
+                        – Menores De 30 Anos;<br>
+                        – Maiores De 65 Anos;<br>
+                        – Famílias (3 Ou Mais Elementos:<br>
+                        Com Adulto/s + Criança/s Até Aos 12 Anos);<br>
+                        – Grupos De 10 Ou Mais Pessoas;<br>
+                        – Cartão Municipal Sénior;<br>
+                        – Cartão Jovem.<br>
+                        Beneficiam De 50% De Desconto:<br>
+                        Estudantes E Professores De Conservatórios, De Academias E De Escolas De Artes E Ensino Superior
+                        De Vertente Artística.<br>
+                        Os Bilhetes Com Desconto São Pessoais E Intransmissíveis, Obrigando À Apresentação Do Respetivo
+                        Documento De Identificação Sempre Que Solicitado.<br>
+                        Os Descontos Não São Acumuláveis E Os Espetáculos Sujeitos A Descontos Estão Devidamente
+                        Assinalados.<br>
+                        As Entradas Gratuitas São Limitadas À Lotação Do Espaço, Mediante Levantamento Prévio De
+                        Bilhete.<br>
+                        <br>
+                        Condições De Acesso<br>
+                        <br>
+                        A Acessibilidade Está Assegurada, Bem Como A Assistência A Deficientes Motores Ou Pessoas Com
+                        Mobilidade Reduzida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footerMain">
+            <div class="footer-container">
+                <div class="footerInfo">
+                    <p class="bold">Teatro Municipal António Pinheiro</p>
+                    <p>Shopping do Cacém,</p>
+                    <p>R. Coração de Maria nº1, 2735-470</p>
+                    <p>40.1124° N, 8.2465° W</p>
+                </div>
+                <div>
+                    <p class="bold">Bilheteira.tmap@cm-tavira.pt</p>
+                    <p class="bold">914 616 949</p>
+                    <p>Instagram</p>
+                    <p>Facebook</p>
+                </div>
+            </div>
+
+            <div class="newsletter-container">
+                <div class="newslettercontent">
+                    <div class="newslettercontent-flex">
+                        <h3 class="bold">Subscreva a Newsletter</h3>
+                        <input type="text" class="small-p" id="newsletterFooter-input" name="newsletterFooter"
+                            value="E-mail">
+                    </div>
+                    <button type="button" class="small-p" id="newsletterFooter-button">Subscrever</button>
+                </div>
+
+                <div class="newslettercontent">
+                    <p class="small-p">Ao subscrever aceita a Política de Privacidade.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/teatroScript.js"></script>
+
+
+</body>
+
+</html>

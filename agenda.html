@@ -15,18 +15,18 @@
         <div class="navHeader-container">
             <div class="navHeader">
                 <a href="index.html">
-                    <p class="bold">Homepage</p>
+                    <p class="navHeader-element bold">Homepage</p>
                 </a>
                 <a href="agenda.html">
-                <p class="bold">A agenda</p>
-            </a>
-            <a>
-                <p class="bold">O teatro</p>
-            </a>
+                    <p class="navHeader-element bold">A agenda</p>
+                </a>
+                <a href="teatro.html">
+                    <p class="navHeader-element bold">O teatro</p>
+                </a>
             </div>
             <div class="navHeader header-socialMedia">
-                <p>Facebook</p>
-                <p>Instagram</p>
+                <p class="navHeader-element">Facebook</p>
+                <p class="navHeader-element">Instagram</p>
             </div>
         </div>
         <hr>
@@ -41,14 +41,14 @@
                     <img class="agendaItem-image" src="data/index/PedroAbrunhosa_2.jpg">
                     <svg viewBox="0 0 220 220" class="text-circle">
                         <defs>
-                            <path id="textPath1" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
+                            <path id="textPath" d="M110,110 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0" />
                             <path id="textPath2" d="M 110, 110 m -95, 0 a 95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
                         </defs>
                         <text>
-                            <textPath href="#textPath1" class="circleText" dominant-baseline="middle" startOffset="50%">
+                            <textPath href="#textPath1" class="circleText" dominant-baseline="middle" startOffset="0%">
                                 <tspan class="eventDetails">17:00, 21:30</tspan>
                                 <tspan class="mainText">Pedro Abrunhosa com a Orquestra Clássica do Centro</tspan>
-                                <tspan class="eventDetails" ">Música</tspan>
+                                <tspan class="eventDetails">Música</tspan>
                             </textPath>
                         </text>
                     </svg>
@@ -364,7 +364,7 @@
         </div>
     </main>
 
- <footer>
+    <footer>
         <hr>
         <div class="footerMain">
             <div class="footer-container">
@@ -403,6 +403,25 @@
     <script>
         function getRandomRotation() {
             const rotations = [0, 90, 180, 270];
+            const randomIndex = Math.floor(Math.random() * rotations.length);
+            return rotations[randomIndex];
+        }
+
+        // Select all text elements containing textPath with class circleText
+        const textElements = document.querySelectorAll('text .circleText');
+
+        textElements.forEach((textElement) => {
+            const rotationAngle = getRandomRotation();
+            // Apply rotation to each text element individually
+            textElement.parentElement.setAttribute('transform', `rotate(${rotationAngle} 110 110)`);
+        });
+    </script>
+
+
+    <!--
+    <script>
+        function getRandomRotation() {
+            const rotations = [0, 90, 180, 270];
             return rotations[Math.floor(Math.random() * rotations.length)];
         }
     
@@ -423,12 +442,8 @@
             console.log(`Rotation Angle: ${rotationAngle}, href: ${textElement.getAttribute('href')}`);
         });
     </script>
-    
 
-    
-    
-
-    <!--
+   
 <script>
         function getRandomRotation() {
             const rotations = [0, 90, 180, -90];
