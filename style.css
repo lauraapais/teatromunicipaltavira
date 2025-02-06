@@ -5,7 +5,7 @@
 
 
     --marginDesktop: 1vw;
-    --marginMobile: 4vw;
+    --marginMobile: 2vw;
 }
 
 @font-face {
@@ -45,7 +45,7 @@ body {
     background-color: var(--bg-color);
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--black);
 }
@@ -112,13 +112,13 @@ header p:hover {
     font-family: 'PPNeueMontreal-Book', sans-serif;
 }
 
-.navHeader-element{
+.navHeader-element {
     transform: scale(1);
     transition: transform 0.5s ease;
 }
 
-.navHeader-element:hover{
-    transform: scale(0.9);
+.navHeader-element:hover {
+    transform: scale(0.95);
     transition: transform 0.5s ease;
 }
 
@@ -131,6 +131,10 @@ footer {
 .footerMain {
     display: flex;
     justify-content: space-between;
+}
+
+.hrFooter{
+    display: none;
 }
 
 footer p {
@@ -187,6 +191,7 @@ footer p {
     flex-wrap: wrap;
     gap: var(--marginDesktop);
     margin-top: var(--marginDesktop);
+    justify-content: center;
 }
 
 .agendaItem {
@@ -277,21 +282,22 @@ path#textPath {
 
 .carousel-container {
     display: flex;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Snap scrolling */
-    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     transition: transform 0.7s ease;
 }
 
 .carousel-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in WebKit browsers */
+    display: none;
 }
 
 .carousel-image {
     object-fit: cover;
-    min-width: 100%;
-    scroll-snap-align: center; /* Snap align images */
+    width: 100%;
+    height: min-content;
+    scroll-snap-align: center;
     transition: transform 0.7s ease;
 }
 
@@ -318,7 +324,7 @@ path#textPath {
 
 
 /*Teatro*/
-.mainTeatro{
+.mainTeatro {
     margin: var(--marginDesktop);
 }
 
@@ -345,21 +351,21 @@ path#textPath {
 }
 
 
-.teatroInfo-container hr{
+.teatroInfo-container hr {
     margin: var(--marginDesktop) 0;
 }
 
-.moreInfoTeatro{
+.moreInfoTeatro {
     width: calc(100vw - var(--marginDesktop)* 2);
     display: flex;
     gap: var(--marginDesktop);
 }
 
-.moreInfoTeatro div{
+.moreInfoTeatro div {
     width: calc((100vw - var(--marginDesktop)* 2) / 3);
 }
 
-.infoTeatro-open-title{
+.infoTeatro-open-title {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -383,29 +389,30 @@ path#textPath {
 
 
 /*Event-Single*/
-.agendaSingle-main{
-    margin: var(--marginDesktop) ;
+.agendaSingle-main {
+    margin: var(--marginDesktop);
 }
-.eventInfo hr{
+
+.eventInfo hr {
     margin: var(--marginDesktop) 0;
 }
 
-.eventInfo{
+.eventInfo {
     display: flex;
     gap: var(--marginDesktop);
 }
 
-.eventInfo-1{
-    width:25%;
+.eventInfo-1 {
+    width: 25%;
 }
 
-.eventInfo-2{
-    width:50%;
+.eventInfo-2 {
+    width: 50%;
 }
 
 
 
-.agendaItem-container-single{
+.agendaItem-container-single {
     display: flex;
     flex-wrap: wrap;
     gap: var(--marginDesktop);
@@ -429,14 +436,14 @@ path#textPath {
     transition: opacity 0.5s ease;
 }
 
-.mainText-single{
+.mainText-single {
     font-family: 'Sherman-Display', sans-serif;
     font-size: 25px;
     fill: var(--white);
     letter-spacing: .05rem;
 }
 
-.eventTitle-single{
+.eventTitle-single {
     width: 45%;
     display: flex;
     align-items: flex-end;
@@ -444,7 +451,7 @@ path#textPath {
     position: relative;
 }
 
-.eventTitle-single svg{
+.eventTitle-single svg {
     position: absolute;
     top: 50%;
     right: 0;
@@ -453,8 +460,102 @@ path#textPath {
 
 
 
-.agendaImage-single{
+.agendaImage-single {
     display: flex;
     justify-content: space-between;
 }
 
+
+
+
+@media only screen and (max-width: 700px) {
+    p {
+        font-family: 'PPNeueMontreal-Book', sans-serif;
+        font-size: 16px;
+    }
+
+    .small-p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-family: 'PPNeueMontreal-Medium', sans-serif;
+        font-size: 22px;
+    }
+
+    /*Footer*/
+    .footerMain {
+        flex-direction: column-reverse;
+    }
+
+    footer {
+        margin: 0 var(--marginMobile);
+        margin-bottom: var(--marginMobile);
+    }
+
+    .footer-container {
+        display: flex;
+        gap: calc(var(--marginMobile));
+        margin-top: var(--marginMobile);
+        flex-direction: column;
+    }
+
+    .newslettercontent {
+        display: flex;
+        gap: var(--marginDesktop);
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hrFooter{
+        display: block;
+    }
+
+    .newsletter-container{
+        margin-bottom: var(--marginMobile);
+        margin-top: var(--marginMobile);
+    }
+
+    /*Header*/
+    header {
+        margin: 0 var(--marginMobile);
+        margin-top: var(--marginMobile);
+    }
+
+    header p {
+        margin: calc(var(--marginMobile) * 1.5) 0;
+        font-size: 18px !important;
+    }
+
+    .header-socialMedia {
+        display: none;
+    }
+
+    .navHeader {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /*Index*/
+    .indexScreen-carousel {
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+    }
+
+    .carousel-container {
+        transform: translateY(calc(-1 * (15px + var(--marginMobile) * 2)));
+        display: flex;
+        align-items: center;
+    }
+
+    .indexScreen-slides {
+        width: 100%;
+        position: absolute;
+        bottom: calc(var(--marginMobile)* 2);
+        display: flex;
+        justify-content: center;
+        gap: calc(var(--marginMobile));
+    }
+
+}
