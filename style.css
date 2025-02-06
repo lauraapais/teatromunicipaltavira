@@ -268,8 +268,8 @@ path#textPath {
 
 
 
- /*Index*/
- .indexScreen-carousel {
+/*Index*/
+.indexScreen-carousel {
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -277,13 +277,22 @@ path#textPath {
 
 .carousel-container {
     display: flex;
-        transition: transform 0.7s ease;
-        height: calc(90vh + var(--marginDesktop)* 2);
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap scrolling */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    transition: transform 0.7s ease;
+    height: calc(90vh + var(--marginDesktop) * 2);
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
 }
 
 .carousel-image {
     object-fit: cover;
     min-width: 100%;
+    scroll-snap-align: center; /* Snap align images */
     transition: transform 0.7s ease;
 }
 
@@ -307,7 +316,6 @@ path#textPath {
 .slidesSelected {
     background-color: var(--black);
 }
-
 
 
 /*Teatro*/

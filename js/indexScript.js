@@ -11,11 +11,30 @@ slides.forEach(slide => {
     });
 });
 
+carouselContainer.addEventListener('scroll', () => {
+    const scrollLeft = carouselContainer.scrollLeft;
+    const containerWidth = carouselContainer.offsetWidth;
+    currentIndex = Math.round(scrollLeft / containerWidth);
+    updateSlidesIndicator(currentIndex);
+});
+
 function updateCarousel(targetIndex) {
-    slides[currentIndex].classList.remove('slidesSelected');
-    slides[targetIndex].classList.add('slidesSelected');
-    carouselContainer.style.transform = `translateX(-${targetIndex * 100}%)`;
+    const containerWidth = carouselContainer.offsetWidth;
+    carouselContainer.scrollTo({
+        left: targetIndex * containerWidth,
+        behavior: 'smooth'
+    });
     body.style.transition = 'background-color 0.5s';
     body.style.backgroundColor = slideColors[targetIndex];
     currentIndex = targetIndex;
+}
+
+function updateSlidesIndicator(targetIndex) {
+    slides.forEach((slide, index) => {
+        if(index === targetIndex) {
+            slide.classList.add('slidesSelected');
+        } else {
+            slide.classList.remove('slidesSelected');
+        }
+    });
 }
