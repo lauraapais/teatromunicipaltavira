@@ -5,7 +5,7 @@
 
 
     --marginDesktop: 1vw;
-    --marginMobile: 2vw;
+    --marginMobile: 4vw;
 }
 
 @font-face {
@@ -512,7 +512,7 @@ path#textPath {
     footer {
         margin: var(--marginMobile);
         margin-bottom: var(--marginMobile);
-        margin-top: calc(var(--marginMobile)* 2);
+        margin-top: calc(var(--marginMobile));
     }
 
     .footer-container {
@@ -524,7 +524,7 @@ path#textPath {
 
     .newslettercontent {
         display: flex;
-        gap: calc(var(--marginMobile));
+        gap: calc(var(--marginMobile) / 2);
         align-items: flex-start;
         flex-direction: column;
     }
@@ -557,7 +557,7 @@ path#textPath {
     }
 
     header p {
-        margin: calc(var(--marginMobile) * 1.5) 0;
+        margin: calc(var(--marginMobile)) 0;
         font-size: 18px !important;
     }
 
@@ -586,7 +586,7 @@ path#textPath {
     .indexScreen-slides {
         width: 100%;
         position: absolute;
-        bottom: calc(var(--marginMobile)* 2);
+        bottom: calc(var(--marginMobile));
         display: flex;
         justify-content: center;
         gap: calc(var(--marginMobile));
@@ -610,18 +610,18 @@ path#textPath {
     }
 
     .teatroInfo-container hr {
-        margin: calc(var(--marginMobile) * 2) 0;
+        margin: calc(var(--marginMobile)) 0;
     }
 
     .moreInfoTeatro {
-        width: calc(100vw - var(--marginMobile)* 2);
+        width: calc(100vw - var(--marginMobile));
         display: flex;
-        gap: var(--marginMobile);
+        gap: 0;
         flex-direction: column;
     }
 
     .moreInfoTeatro div {
-        width: calc(100vw - var(--marginMobile) * 2);
+        width: calc(100vw - var(--marginMobile));
     }
 
     .hrNone{
@@ -629,7 +629,7 @@ path#textPath {
     }
 
     .aboutTeatro{
-        margin-top: calc(var(--marginMobile) * 2);
+        margin-top: calc(var(--marginMobile));
     }
 
     
