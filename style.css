@@ -541,7 +541,7 @@ path#textPath {
 
     .newslettercontent-flex {
         display: flex;
-        gap: var(--marginDesktop);
+        gap: var(--marginMobile);
         align-items: flex-end;
         width:100%;
     }
