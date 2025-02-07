@@ -36,6 +36,16 @@
     font-style: normal;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: var(--bg-color);
+    background: var(--black);
+  }
+  
+  ::selection {
+    color: var(--bg-color);
+    background: var(--black);
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -126,6 +136,7 @@ header p:hover {
     transition: transform 0.5s ease;
 }
 
+
 /*Footer*/
 footer {
     margin: 0 var(--marginDesktop);
@@ -189,6 +200,7 @@ footer p {
     justify-content: space-between;
 }
 
+
 /**/
 .agendaItem-container {
     display: flex;
@@ -251,12 +263,9 @@ path#textPath {
     letter-spacing: .05rem;
 }
 
-
 .agendaItem:hover .eventDetails {
     opacity: 1;
 }
-
-
 
 .agendaItem:hover .text-circle {
     transition: transform 0.5s ease;
@@ -300,7 +309,7 @@ path#textPath {
 
 .img-container {
     min-width: 100vw;
-    height: 100%;
+    height: calc(var(--vh, 1h)* 90);
 }
 
 .imgMobile{
@@ -311,14 +320,21 @@ path#textPath {
     display: block;
 }
 
-.carousel-image {
+/* Apply contain to the first image in both imgDesktop and imgMobile containers */
+.imgDesktop:first-child .carousel-image,
+.imgMobile:first-child .carousel-image {
     object-fit: contain;
-    object-position: top center;
+}
+
+/* Apply cover to all other images */
+.carousel-image {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     scroll-snap-align: center;
     transition: transform 0.7s ease;
 }
+
 
 .indexScreen-slides {
     width: 100%;
@@ -580,6 +596,7 @@ path#textPath {
        /* transform: translateY(calc(-1 * (15px + var(--marginMobile) * 2)));*/
         display: flex;
         align-items: center;
+        height: 100%;
     }
 
     .indexScreen-slides {
