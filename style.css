@@ -138,6 +138,7 @@ header p:hover {
 
 
 /*Footer*/
+
 footer {
     margin: 0 var(--marginDesktop);
     margin-bottom: var(--marginDesktop);
@@ -190,7 +191,7 @@ footer p {
 .newslettercontent-flex {
     display: flex;
     gap: var(--marginDesktop);
-
+    align-items: flex-end;
 }
 
 .newsletter-container {
@@ -297,10 +298,15 @@ path#textPath {
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;     /* Hide scrollbar in Firefox */
     transition: transform 0.7s ease;
     height: calc(var(--vh, 1h)* 90);
+}
+
+/* Hide scrollbar in WebKit-based browsers */
+.carousel-container::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -310,6 +316,7 @@ path#textPath {
 .img-container {
     min-width: 100vw;
     height: calc(var(--vh, 1h)* 90);
+    
 }
 
 .imgMobile{
@@ -320,13 +327,11 @@ path#textPath {
     display: block;
 }
 
-/* Apply contain to the first image in both imgDesktop and imgMobile containers */
 .imgDesktop:first-child .carousel-image,
 .imgMobile:first-child .carousel-image {
     object-fit: contain;
 }
 
-/* Apply cover to all other images */
 .carousel-image {
     object-fit: cover;
     width: 100%;
@@ -447,8 +452,6 @@ path#textPath {
     width: 50%;
 }
 
-
-
 .agendaItem-container-single {
     display: flex;
     flex-wrap: wrap;
@@ -457,7 +460,8 @@ path#textPath {
 }
 
 .agendaItem-single {
-    height: calc(var(--vh, 1h)* 90);
+    height: 45vw;
+    width: 45vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -620,6 +624,29 @@ path#textPath {
         object-fit: cover;
     }
 
+    .agendaItem-single {
+        height: 90vw;
+        width: 90vw;
+    }
+
+    .agendaImage-single {
+        flex-direction: column;
+    }
+
+    .eventTitle-single svg{
+        position: initial;
+    }
+
+    .eventTitle-single {
+        width: 100%;
+    }
+
+    .eventTitle-single svg {
+        top: 50%;
+        right: 0;
+        transform: translate(0);
+    }
+
     /*about*/
     .mainTeatro {
         margin: var(--marginMobile);
@@ -654,5 +681,37 @@ path#textPath {
         height: calc(var(--vh, 1h)* 40);
         position: relative;
         overflow: hidden;
+    }
+
+    /*agenda*/
+    .agendaItem {
+        width: calc((100vw - var(--marginDesktop)* 4));
+        height: calc((100vw - var(--marginDesktop)* 4));
+    }
+
+    /*agenda-single*/
+    .agendaSingle-main {
+        margin: var(--marginMobile);
+    }
+
+    .agendaImage-single {
+        flex-direction: column;
+        gap: var(--marginMobile);
+    }
+
+    .eventInfo {
+        flex-direction: column;
+    }
+
+    .eventInfo-1 {
+        width: 100%;
+    }
+
+    .eventInfo-2 {
+        width: 100%;
+    }
+
+    .eventInfo hr {
+        margin: var(--marginMobile) 0;
     }
 }
