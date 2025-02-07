@@ -403,7 +403,9 @@ path#textPath {
     transition: max-height 0.5s ease-out;
 }
 
-
+.hrNone{
+    display: block;
+}
 
 
 
@@ -508,8 +510,9 @@ path#textPath {
     }
 
     footer {
-        margin: 0 var(--marginMobile);
+        margin: var(--marginMobile);
         margin-bottom: var(--marginMobile);
+        margin-top: calc(var(--marginMobile)* 2);
     }
 
     .footer-container {
@@ -601,5 +604,39 @@ path#textPath {
         object-fit: cover;
     }
 
+    /*about*/
+    .mainTeatro {
+        margin: var(--marginMobile);
+    }
 
+    .teatroInfo-container hr {
+        margin: calc(var(--marginMobile) * 2) 0;
+    }
+
+    .moreInfoTeatro {
+        width: calc(100vw - var(--marginMobile)* 2);
+        display: flex;
+        gap: var(--marginMobile);
+        flex-direction: column;
+    }
+
+    .moreInfoTeatro div {
+        width: calc(100vw - var(--marginMobile) * 2);
+    }
+
+    .hrNone{
+        display: none;
+    }
+
+    .aboutTeatro{
+        margin-top: calc(var(--marginMobile) * 2);
+    }
+
+    
+    .imageTeatro {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow: hidden;
+    }
 }
