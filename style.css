@@ -510,9 +510,8 @@ path#textPath {
     }
 
     footer {
-        margin: var(--marginMobile);
+        margin: 0 var(--marginMobile);
         margin-bottom: var(--marginMobile);
-        margin-top: calc(var(--marginMobile));
     }
 
     .footer-container {
