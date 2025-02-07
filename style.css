@@ -74,6 +74,10 @@ hr {
 
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 .small-p {
     font-size: 18px;
 }
@@ -299,6 +303,14 @@ path#textPath {
     height: 100%;
 }
 
+.imgMobile{
+    display: none;
+}
+
+.imgDesktop{
+    display: block;
+}
+
 .carousel-image {
     object-fit: contain;
     object-position: top center;
@@ -509,7 +521,7 @@ path#textPath {
 
     .newslettercontent {
         display: flex;
-        gap: var(--marginDesktop);
+        gap: calc(var(--marginMobile));
         align-items: flex-start;
         flex-direction: column;
     }
@@ -521,6 +533,18 @@ path#textPath {
     .newsletter-container{
         margin-bottom: var(--marginMobile);
         margin-top: var(--marginMobile);
+        gap: var(--marginMobile);
+    }
+
+    .newslettercontent-flex {
+        display: flex;
+        gap: var(--marginDesktop);
+        align-items: flex-end;
+        width:100%;
+    }
+
+    #newsletterFooter-input {
+        width: 90%;
     }
 
     /*Header*/
@@ -551,7 +575,7 @@ path#textPath {
     }
 
     .carousel-container {
-        transform: translateY(calc(-1 * (15px + var(--marginMobile) * 2)));
+       /* transform: translateY(calc(-1 * (15px + var(--marginMobile) * 2)));*/
         display: flex;
         align-items: center;
     }
@@ -564,5 +588,18 @@ path#textPath {
         justify-content: center;
         gap: calc(var(--marginMobile));
     }
+
+    .imgMobile{
+        display: block;
+    }
+
+    .imgDesktop{
+        display: none;
+    }
+
+    .carousel-image {
+        object-fit: cover;
+    }
+
 
 }

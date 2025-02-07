@@ -33,7 +33,7 @@ function updateCarousel(targetIndex) {
 
 function updateSlidesIndicator(targetIndex) {
     slides.forEach((slide, index) => {
-        if(index === targetIndex) {
+        if (index === targetIndex) {
             slide.classList.add('slidesSelected');
         } else {
             slide.classList.remove('slidesSelected');
