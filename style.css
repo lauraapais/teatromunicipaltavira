@@ -218,6 +218,8 @@ footer p {
     justify-content: center;
     align-items: center;
     position: relative;
+    border-radius: 100%; /* Add this line to make the div circular */
+    overflow: hidden; /* Add this line to ensure the image stays within the circular div */
 }
 
 .agendaItem-image {
@@ -490,6 +492,7 @@ path#textPath {
     align-items: flex-end;
     justify-content: flex-end;
     position: relative;
+    overflow: hidden;
 }
 
 .eventTitle-single svg {
