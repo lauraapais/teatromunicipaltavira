@@ -479,9 +479,10 @@ path#textPath {
     transition: opacity 0.5s ease;
 }
 
+
 .mainText-single {
     font-family: 'Sherman-Display', sans-serif;
-    font-size: 25px;
+    font-size: 65px;
     fill: var(--white);
     letter-spacing: .05rem;
 }
@@ -496,10 +497,11 @@ path#textPath {
 }
 
 .eventTitle-single svg {
+    width:90vw;
     position: absolute;
-    top: 50%;
+    bottom: 0;
     right: 0;
-    transform: translate(50%, calc(var(--marginDesktop)));
+    transform: translate(50%, 50%);
 }
 
 
@@ -579,7 +581,7 @@ path#textPath {
     }
 
     header p {
-        margin: calc(var(--marginMobile)) 0;
+        margin: calc(var(--marginMobile) * 0.75) 0;
         font-size: 18px !important;
     }
 
@@ -644,11 +646,6 @@ path#textPath {
         width: 100%;
     }
 
-    .eventTitle-single svg {
-        top: 50%;
-        right: 0;
-        transform: translate(0);
-    }
 
     /*about*/
     .mainTeatro {
